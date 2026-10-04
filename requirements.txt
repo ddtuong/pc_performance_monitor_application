@@ -1,0 +1,5 @@
+psutil>=5.9
+# Optional (each unlocks real hardware data; the app runs without them):
+nvidia-ml-py>=12.0 ; sys_platform == "win32" or sys_platform == "linux"   # NVIDIA GPU metrics (NVML)
+wmi>=1.5 ; sys_platform == "win32"                                         # LibreHardwareMonitor sensors (temps/fans/power)
+pywin32>=306 ; sys_platform == "win32"                                     # COM support required by wmi

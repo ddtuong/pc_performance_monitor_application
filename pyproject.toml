@@ -1,0 +1,15 @@
+[project]
+name = "pc-performance-monitor"
+version = "1.0.0"
+description = "Modular Tkinter PC performance monitor (Windows-first)"
+requires-python = ">=3.11"
+dependencies = ["psutil>=5.9"]
+
+[project.optional-dependencies]
+gpu = ["nvidia-ml-py>=12.0"]
+sensors = ["wmi>=1.5; sys_platform == 'win32'", "pywin32>=306; sys_platform == 'win32'"]
+dev = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
